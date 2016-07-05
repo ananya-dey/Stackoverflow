@@ -1,0 +1,65 @@
+[
+	{
+		"id": 1,
+		"qus": "Why we use ng-repeat?",
+		"details":"this is the details page of why we use ng-repeat"
+	},
+	{
+		"id": 2,
+		"qus": "Why we use ng-animate?",
+		"details":"this is the details page of why we use ng-animate"
+	
+	},
+	{
+		"id": 3,
+		"qus": "Why we use ng-model?",
+		"details":"this is the details page of why we use ng-model"
+	
+	},
+	{
+		"id": 4,
+		"qus": "Why we use ng-valid?",
+		"details":"this is the details page of why we use ng-valid"
+	
+	},
+	{
+		"id": 5,
+		"qus": "Why we use ng-show?",
+		"details":"this is the details page of why we use ng-show"
+	
+	},
+	{
+		"id": 6,
+		"qus": "Why we use ng-binding?",
+		"details":"this is the details page of why we use ng-binding"
+	
+	},
+	{
+		"id": 7,
+		"qus": "How do i use foreach loop?",
+		"details":"this is the details page of how do i use foreach loop"
+	
+	},
+	{
+		"id": 8,
+		"qus": "How do i check if value exist in array?",
+		"details":"this is the details page of how do i check if value exist in array"
+	
+	},
+	{
+		"id": 9,
+		"qus": "Why we use float in css?",
+		"details":"this is the details page of why we use float in css"
+	
+	},
+	{
+		"id": 10,
+		"qus": "What is functional programming?",
+		"details":"this is the details page of what is functional programming"
+	
+	}
+]
+
+
+
+

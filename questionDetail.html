@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Stackoverflow</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"></link>	
+  <link rel="stylesheet" href="stack.css"></link>
+</head>
+
+<body  ng-controller="QusDetailController">
+
+<div class="container">
+<div class="text-right">
+	<button type="submit" class="btn btn-default"><a href="#/questionList.html">Back</a></button>
+</div>
+	<section>
+		<h1>{{qus}}</h1>
+		<p>Detail:{{x.details}}</p>
+		<!--Here is the comment section-->
+		<div>
+			<table>
+				<tr ng-repeat="x in showCmnt">
+					<td>{{x.id}}. {{x.cmnt}}</td>
+				</tr>			
+			</table></br>
+		</div>
+		<div>
+			<form role="form">
+				<div class="form-group">
+					<textarea class="form-control" rows="1" ng-model="addcmnt" placeholder="add a comment" required></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary" ng-click="addCmnt()">Post</button>
+				<button type="submit" class="btn btn-primary" ng-click="clear2()">Clear</button>
+			</form>
+		</div>
+	</section>
+	<hr>
+	<!--Here is the answer section-->	
+	<div>
+		<table>
+			<tr ng-repeat="x in showAns">
+				<td>{{x.id}}. {{x.ans}}</td>
+			</tr>			
+		</table>
+	</div>
+	<div></br>
+		<form role="form">
+			<div class="form-group">
+				<label for="comment">Give your answer:</label>
+				<textarea class="form-control" rows="6" ng-model="giveans"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary" ng-click="giveAns()">Post</button>
+			<button type="submit" class="btn btn-primary" ng-click="clear3()">Clear</button>
+		</form>
+	</div>	
+</div>
+	
+
+
+
+
+
+	
+
+	
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="angular-route.js"></script>
+	<script src="stack.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Stackoverflow</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"></link>	
+  <link rel="stylesheet" href="stack.css"></link>
+</head>
+
+<body ng-controller="QusListController">
+
+<div class="container">
+	<section>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Questions</th>
+				</tr>			
+			</thead>
+			<tbody id="pages">
+				<!--Here datas are fetched from json-->
+				<tr ng-repeat="x in questions">
+					<td>{{x.id}}</td>
+					<td><a href="#/{{x.qus}}">{{x.qus}}</a></td>
+				</tr>
+				<!--Here datas are added by user-->
+				<tr ng-repeat="x in qusList">
+					<td>{{x.id}}</td>
+					<td><a href="#/{{x.qus1}}">{{x.qus1}}</a></td>
+				</tr>					
+			</tbody>
+		</table>		 
+	</section>	
+	<hr>
+	<!--Here is the question section-->
+	<div>
+		<form role="form">
+			<div class="form-group">
+				<label for="comment">Ask your Question:</label>
+				<textarea class="form-control" rows="6" ng-model="addQus" name="addQus" required></textarea>				
+			</div>
+			<button type="submit" class="btn btn-primary" ng-click="askQus()">Post</button>
+			<button type="submit" class="btn btn-primary" ng-click="clear()">Clear</button>
+		</form>
+	</div>
+</div>
+	
+
+
+
+
+
+	
+
+	
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="angular-route.js"></script>
+	<script src="stack.js"></script>
+</body>
+
+</html>
